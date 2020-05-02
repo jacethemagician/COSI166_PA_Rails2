@@ -11,13 +11,11 @@ gem "json"
 course_list = JSON.parse(File.read('db/course.json'))
 values_course = []
 columns_course = [ :course_code, :course_name, :course_description, :subject_id ]
-# columns_course = [ :course_code, :course_name, :course_description]
-# puts "=========#{course_list[0]['subjects'][0]["id"]}"
+
 course_list.each do |course|
   values_course << Course.new(course_code:course['code'], course_name:course['name'],
     course_description:course['description'], subject_id:course['subjects'][0]['id'])
-  # values_course << Course.new(course_code:course['code'], course_name:course['name'],
-  #   course_description:course['description'])
+
 end
 
 instructor_list = JSON.parse(File.read('db/instructor.json'))
