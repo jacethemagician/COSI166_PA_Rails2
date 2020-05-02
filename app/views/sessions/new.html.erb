@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Log in</title>
+    <title>Login Page</title>
   </head>
   <body>
     <div class="container">
-      <h1> Log in </h1>
+      <h1> User Login</h1>
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <% flash.each do |message_type, message| %>
@@ -20,9 +20,9 @@
           <%= f.label :password %>
           <%= f.password_field :password, class: 'form-control' %>
 
-          <%= f.submit "Log in", class: "btn btn-primary" %>
+          <%= f.submit "Log in", class: "btn btn-dark" %>
         <% end %>
-        <p>New user? <%= link_to "Sign up now!", 'signup' %></p>
+        <p>Don't have an account? <%= link_to "Sign up now!", 'signup' %></p>
       </div>
       </div>
     </div>

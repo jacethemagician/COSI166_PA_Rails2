@@ -1,17 +1,17 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><html>
   <head>
-    <title>Course Enrolled</title>
+    <title>Dashboard</title>
   </head>
 
   <body>
     <!-- <%= render "common/navbar" %> -->
-    <div class="container">
+    <div class="container", style="padding-top:30px">
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
       <!-- <div class="row"> -->
-        <h2>My Enrolled Course</h2>
-        <a class="btn btn-primary pull-right" href="search_course" role="button" style="margin-top:20px">Find a new course</a>
+        <h2>Dashboard: Course Enrollment</h2>
+        <a class="btn btn-dark pull-right" href="search_course" role="button" style="margin-top:20px">Find course</a>
       <!-- </div> -->
       <table class="table table-striped table-dark" style="margin-top:10px">
         <thead>
